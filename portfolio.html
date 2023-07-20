@@ -7,38 +7,10 @@
     <!--normalize-->
     <link rel="normalize" href="/css/modern-normalize.min.css" />
     <!--robo400-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
-      rel="stylesheet"
-    />
-    <!--robo500-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,400;1,500&display=swap"
-      rel="stylesheet"
-    />
-    <!--robo700-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&display=swap"
-      rel="stylesheet"
-    />
-    <!--robo900-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <!--raleway400-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -55,15 +27,25 @@
             >Web<span class="studio-text">Studio</span></a
           >
           <ul class="ul-one list">
-            <li><a href="./index.html" class="link header-link">Studio</a></li>
+            <li class="link-portfolio">
+              <a href="./index.html" class="link active header-link">Studio</a>
+            </li>
             <li>
-              <a href="./portfolio.html" class="link header-link active"
-                >Portfolio</a
-              >
+              <a href="./portfolio.html" class="link header-link">Portfolio</a>
             </li>
             <li><a href="" class="link header-link">Contacts</a></li>
           </ul>
         </nav>
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="icon-menu-open" width="32" height="22">
+            <use href="./images/icons.svg#burger"></use>
+          </svg>
+        </button>
 
         <address class="address">
           <ul class="ul-address list">
@@ -77,6 +59,78 @@
             </li>
           </ul>
         </address>
+      </div>
+
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <div class="container">
+          <button class="menu-toggle-close js-close-menu">
+            <svg width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu">
+            <li class="mobile-menu-item">
+              <a href="./index.html" class="link mobile-menu-link">Studio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="./portfolio.html" class="link active mobile-menu-link"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mobile-menu-item">
+              <a href="" class="link mobile-menu-link">Contacts</a>
+            </li>
+          </ul>
+
+          <ul class="menu-address list">
+            <li>
+              <a href="tel:+110001111111" class="link menu-address-tel"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:info@devstudio.com"
+                class="link menu-address-email"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-networks">
+            <li class="sm-item mobile-networks-item">
+              <a href="" class="sm-link" aria-label="IS">
+                <svg class="sm-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="sm-item">
+              <a href="" class="sm-link mobile-networks-item" aria-label="TW">
+                <svg class="sm-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="sm-item">
+              <a href="" class="sm-link mobile-networks-item" aria-label="FB">
+                <svg class="sm-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="sm-item">
+              <a href="" class="sm-link mobile-networks-item" aria-label="LKI">
+                <svg class="sm-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!--MAin content Portfolio-->
@@ -393,5 +447,14 @@
         </div>
       </div>
     </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/mobile-menuu.js"></script>
   </body>
 </html>
